@@ -37,3 +37,11 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+$color-chocolate: #d2691e;
+
+h1 {
+  color: $color-chocolate;
+}
+</style>
