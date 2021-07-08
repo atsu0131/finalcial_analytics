@@ -29,7 +29,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
   async asyncData({ app }): Promise<object> {
     const greet: string = await app.$axios.$get('/').catch((err) => err)
@@ -40,8 +39,9 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 $color-chocolate: #d2691e;
-
 h1 {
   color: $color-chocolate;
 }
 </style>
+
+
