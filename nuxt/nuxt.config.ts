@@ -42,18 +42,18 @@ export default {
     '@nuxtjs/dotenv',
   ],
 
-  proxy: {
-    '/api':
-      environment === 'development'
-        ? 'http://localhost:10080'
-        : 'https://www.example.org',
-  },
+  // proxy: {
+  //   '/api':
+  //     environment === 'development'
+  //       ? process.env.API_URL
+  //       : 'https://www.example.org',
+  // },
 
-  axios: {
-    baseURL: 'http://localhost:10080',
-    browserBaseURL: process.env.API_BROWSER_URL,
-    credentials: true,
-  },
+  // axios: {
+  //   baseURL: process.env.API_URL,
+  //   browserBaseURL: process.env.API_BROWSER_URL,
+  //   credentials: true,
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
