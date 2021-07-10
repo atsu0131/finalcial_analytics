@@ -45,12 +45,12 @@ export default {
   proxy: {
     '/api':
       environment === 'development'
-        ? process.env.API_URL
+        ? 'http://localhost:10080'
         : 'https://www.example.org',
   },
 
   axios: {
-    baseURL: process.env.API_URL,
+    baseURL: 'http://localhost:10080',
     browserBaseURL: process.env.API_BROWSER_URL,
     credentials: true,
   },
