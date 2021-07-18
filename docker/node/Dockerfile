@@ -12,4 +12,4 @@ RUN apk update && \
 
 EXPOSE 3000
 
-ENTRYPOINT ["yarn", "run", "dev"]
+# ENTRYPOINT ["yarn", "run", "dev"]
