@@ -36,15 +36,10 @@ export default {
   modules: ["@nuxtjs/axios", "@nuxtjs/proxy", "@nuxtjs/dotenv"],
 
   proxy: {
-    "/api": {
-      target: "http://localhost:8000",
-      pathRewrite: {
-        "^/api": "/"
-      }
-    }
-    // environment === 'development'
-    //   ? process.env.API_URL
-    //   : 'https://www.example.org',
+    "/api":
+      environment === "development"
+        ? process.env.API_URL
+        : "https://www.example.org"
   },
 
   axios: {
