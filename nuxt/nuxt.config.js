@@ -38,16 +38,16 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/axios",
-    '@nuxtjs/proxy',
+    // '@nuxtjs/proxy',
     '@nuxtjs/dotenv',
   ],
 
-  proxy: {
-    '/api':
-      environment === 'development'
-        ? process.env.API_URL
-        : 'https://www.example.org',
-  },
+  // proxy: {
+  //   '/api':
+  //     environment === 'development'
+  //       ? process.env.API_URL
+  //       : 'https://www.example.org',
+  // },
 
   axios: {
     baseURL: process.env.API_URL,
