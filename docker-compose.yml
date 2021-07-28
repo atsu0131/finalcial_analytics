@@ -64,3 +64,16 @@ services:
       - web
     depends_on:
       - web
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin # phpmyadminのイメージを使用
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db_master
+      - PMA_USER=${DB_USER}
+      - PMA_PASSWORD=${DB_PASS}
+    links:
+      - db_master
+    ports:
+      - 8081:80
+    volumes:
+      - /sessions
